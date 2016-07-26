@@ -1,0 +1,27 @@
+﻿
+<div ng-app="myapp">
+    <div ng-controller="StudentCtrl">
+        <table class="table table-striped table-bordered table-hover table-checkable datatable">
+            <thead class="grid-top-panel">
+                <tr>
+                    <th>Student ID</th>
+                    <th>First Name</th>
+                    <th>LastName</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="dataModel in students">
+                    <td>{{dataModel.StudentID}}</td>
+                    <td>{{dataModel.FirstName}}</td>
+                    <td>{{dataModel.LastName}}</td>
+                    <td>{{dataModel.Email}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/ScriptsNg/Module/app.js"></script>
+<script src="~/ScriptsNg/Controller/StudentController.js"></script>
+<script src="~/ScriptsNg/Services/StudentService.js"></script>
